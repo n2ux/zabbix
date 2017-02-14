@@ -15,6 +15,9 @@ const (
 
 	Monitored   StatusType = 0
 	Unmonitored StatusType = 1
+	
+	NotInMaint  StatusType = 0
+	InMaint     StatusType = 0
 )
 
 // https://www.zabbix.com/documentation/2.2/manual/appendix/api/host/definitions
@@ -25,6 +28,7 @@ type Host struct {
 	Error     string        `json:"error"`
 	Name      string        `json:"name"`
 	Status    StatusType    `json:"status"`
+	MaintStatus	StatusType	`json:"maintenance_status"`
 
 	// Fields below used only when creating hosts
 	GroupIds   HostGroupIds   `json:"groups,omitempty"`
