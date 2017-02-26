@@ -17,7 +17,7 @@ const (
 	Unmonitored StatusType = 1
 	
 	NotInMaint  StatusType = 0
-	InMaint     StatusType = 0
+	InMaint     StatusType = 1
 )
 
 // https://www.zabbix.com/documentation/2.2/manual/appendix/api/host/definitions
